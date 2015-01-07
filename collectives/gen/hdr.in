@@ -1,0 +1,31 @@
+#ifndef __#COLLEC#_BENCH_H__
+#define __#COLLEC#_BENCH_H__
+
+
+#include "CollectivesBench.h"
+
+
+namespace CMSB {
+
+	/**
+	 * Represents #COLLEC# benchmark.
+	 */
+	class #COLLEC#Bench : public CMSB::CollectivesBench {
+
+	public:
+
+		#COLLEC#Bench  (unsigned int messageSize);
+		virtual ~#COLLEC#Bench ();
+		
+		virtual void init (MPI_Comm worldComm, CMSB::MicroBench::MicroBenchInfo* benchInfo);
+        virtual const char* getMicroBenchName () const;
+		virtual void writeResultToProfile () const;
+
+	protected:
+		virtual void performMPICollectiveFunc ();
+	};
+	
+}
+
+
+#endif   // __#COLLEC#_BENCH_H__

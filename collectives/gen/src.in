@@ -1,0 +1,49 @@
+#include <mpi.h>
+#include "#COLLEC#Bench.h"
+
+#ifdef USE_SCOREP
+#include <scorep/SCOREP_User.h>
+#endif
+
+
+
+
+//======================================================================
+
+#ifdef USE_SCOREP
+SCOREP_USER_METRIC_LOCAL (bench_#COLLEC#Bench_metric);
+#endif
+
+
+CMSB::#COLLEC#Bench::#COLLEC#Bench (unsigned int messageSize) {
+
+    _msgSize = messageSize;
+}
+
+CMSB::#COLLEC#Bench::~#COLLEC#Bench () {
+}
+
+void CMSB::#COLLEC#Bench::init (MPI_Comm worldComm, CMSB::MicroBench::MicroBenchInfo* benchInfo) {
+
+	CMSB::CollectivesBench::init (worldComm, benchInfo);
+#ifdef USE_SCOREP
+    SCOREP_USER_METRIC_INIT (bench_#COLLEC#Bench_metric, "#COLLEC# timing", "usec",
+                             SCOREP_USER_METRIC_TYPE_DOUBLE, SCOREP_USER_METRIC_CONTEXT_GLOBAL);
+#endif
+}
+
+const char* CMSB::#COLLEC#Bench::getMicroBenchName () const {
+
+    return "MPI_#COLLEC#";
+}
+
+void CMSB::#COLLEC#Bench::writeResultToProfile () const {
+
+#ifdef USE_SCOREP
+	if (_myRank == 0) {		// Only one rank should update SCORE-P's metrics
+		SCOREP_USER_METRIC_DOUBLE (bench_#COLLEC#Bench_metric, getMicroBenchResult ());
+	}
+#endif
+}
+
+//======================================================================
