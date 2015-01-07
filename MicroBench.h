@@ -2,7 +2,7 @@
 #define __MICRO_BENCH_H__
 
 #include <mpi.h>
-#include "timing/ClockSync.h"
+//#include "timing/ClockSync.h"
 
 namespace CMSB {
 
@@ -19,11 +19,10 @@ namespace CMSB {
 				_sendDispls (NULL),
 				_recvCounts (NULL),
 				_recvDispls (NULL) {}
-			
 			double* _sendBuff;
-            unsigned int _sBuffLen;     // In bytes
+                        unsigned int _sBuffLen;     // In bytes
 			double* _recvBuff;
-            unsigned int _rBuffLen;     // In bytes
+                        unsigned int _rBuffLen;     // In bytes
 			int*	_sendCounts;
 			int*	_sendDispls;
 			int*	_recvCounts;
@@ -34,9 +33,10 @@ namespace CMSB {
 		virtual ~MicroBench ()	{}
 
 		virtual void init (MPI_Comm worldComm, CMSB::MicroBench::MicroBenchInfo* benchInfo)	
-        { _worldComm = worldComm; _benchInfo = *benchInfo; }
+                        { _worldComm = worldComm; _benchInfo = *benchInfo; }
         
-		virtual void runMicroBench (CMSB::TimeSyncInfo* syncInfo) = 0;
+		virtual void runMicroBench () = 0;
+		//cscs virtual void runMicroBench (CMSB::TimeSyncInfo* syncInfo) = 0;
 		virtual const char* getMicroBenchName  () const = 0;
 		virtual double getMicroBenchResult     () const = 0;
 		virtual void writeResultToProfile      () const = 0;

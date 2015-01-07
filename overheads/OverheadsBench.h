@@ -25,7 +25,8 @@ namespace CMSB {
         virtual ~OverheadsBench ();
         
         virtual void init (MPI_Comm worldComm, CMSB::MicroBench::MicroBenchInfo* benchInfo);
-        virtual void runMicroBench (CMSB::TimeSyncInfo* syncInfo);
+        //cscs virtual void runMicroBench (CMSB::TimeSyncInfo* syncInfo);
+        virtual void runMicroBench ();
 		virtual const char* getMicroBenchName  () const = 0;
 		virtual double getMicroBenchResult     () const { return _overheadSize; }
 		virtual void writeResultToProfile      () const = 0;

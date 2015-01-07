@@ -26,17 +26,13 @@ namespace CMSB {
          * Returns the peak allocated memory estimate in bytes.
          */
         static uint64_t getPeakMemConsumption ();
-        
         static void startLocalPeakMemMeasurement ();
-        
         static uint64_t getLocalPeakMemConsumption ();
-        
         static uint64_t getProcMemConsumption ();
         /**
          * Returns the total memory consumption of the given benchmarks.
          */
         static uint64_t getBenchesMemConsumption (const std::vector<CMSB::MicroBench*>& benchmarks);
-        
         static void printSmapsFile ();
     };
     

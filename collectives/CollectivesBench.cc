@@ -187,33 +187,38 @@ void CMSB::CollectivesBench::runMicroBench (CMSB::TimeSyncInfo* syncInfo) {
 
 void CMSB::createCollectiveMicroBenches (std::vector<MicroBench*>& benchmarks, unsigned int messageSizePerProc) {
 	
+	benchmarks.push_back (new CMSB::BcastBench(messageSizePerProc));
+	benchmarks.push_back (new CMSB::GatherBench(messageSizePerProc));
+	benchmarks.push_back (new CMSB::AllgatherBench(messageSizePerProc));
 	// Latency-oriented benchmarks
-	benchmarks.push_back (new CMSB::AlltoallBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::AllgatherBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::AllreduceBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::GatherBench		  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::ReduceBench		  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::BcastBench		  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::ScatterBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::ScanBench		  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::ReduceScatterBench(messageSizePerProc));
-	benchmarks.push_back (new CMSB::AlltoallvBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::AllgathervBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::GathervBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::ScattervBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::BarrierBench   	  ());
+//cscs	benchmarks.push_back (new CMSB::AlltoallBench	  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::AllgatherBench	  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::AllreduceBench	  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::GatherBench		  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::ReduceBench		  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::BcastBench		  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::ScatterBench	  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::ScanBench		  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::ReduceScatterBench(messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::AlltoallvBench	  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::AllgathervBench	  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::GathervBench	  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::ScattervBench	  (messageSizePerProc));
+//cscs	benchmarks.push_back (new CMSB::BarrierBench   	  ());
 }
 
 void CMSB::createCollectiveMicroBenchesMinimalVer (std::vector<MicroBench*>& benchmarks, unsigned int messageSizePerProc) {
 	
-	benchmarks.push_back (new CMSB::BarrierBench   	  ());
+	//cscs benchmarks.push_back (new CMSB::BarrierBench   	  ());
+
 	benchmarks.push_back (new CMSB::BcastBench		  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::ReduceBench		  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::AllreduceBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::GatherBench		  (messageSizePerProc));
+	//cscs benchmarks.push_back (new CMSB::ReduceBench		  (messageSizePerProc));
+	//cscs benchmarks.push_back (new CMSB::AllreduceBench	  (messageSizePerProc));
+	//cscs benchmarks.push_back (new CMSB::GatherBench		  (messageSizePerProc));
+
 	benchmarks.push_back (new CMSB::AllgatherBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::AlltoallBench	  (messageSizePerProc));
-	benchmarks.push_back (new CMSB::BcastAltBench	  (messageSizePerProc));
+	//cscs benchmarks.push_back (new CMSB::AlltoallBench	  (messageSizePerProc));
+	//cscs benchmarks.push_back (new CMSB::BcastAltBench	  (messageSizePerProc));
 	//benchmarks.push_back (new CMSB::ScatterBench	  (messageSizePerProc));
 	//benchmarks.push_back (new CMSB::ReduceAltBench	  (messageSizePerProc));
 	//benchmarks.push_back (new CMSB::GatherAltBench	  (messageSizePerProc));

@@ -1,0 +1,63 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALLOCS_HASH_TAB_SIZE	MemEstimator.cc	18;"	d	file:
+EpkHashIter_struct	epk_hashtab.cc	/^struct EpkHashIter_struct$/;"	s	file:
+EpkHashTab_struct	epk_hashtab.cc	/^struct EpkHashTab_struct$/;"	s	file:
+ListItem	epk_hashtab.cc	/^typedef struct ListItem_struct ListItem;$/;"	t	typeref:struct:ListItem_struct	file:
+ListItem_struct	epk_hashtab.cc	/^struct ListItem_struct$/;"	s	file:
+OverheadsBench	OverheadsBench.cc	/^CMSB::OverheadsBench::OverheadsBench () $/;"	f	class:CMSB::OverheadsBench
+__malloc_initialize_hook	MemEstimator.cc	/^void (*__malloc_initialize_hook) (void) = my_init_hook;$/;"	v
+alloc_hash_tab	MemEstimator.cc	/^static EpkHashTab* alloc_hash_tab = NULL;$/;"	v	file:
+allocs_cmp_func	MemEstimator.cc	/^static int allocs_cmp_func (const void* key , const void* item_key) {$/;"	f	file:
+allocs_hash_func	MemEstimator.cc	/^static size_t allocs_hash_func (const void* key) {$/;"	f	file:
+createOverheadsMicroBenches	OverheadsBench.cc	/^void CMSB::createOverheadsMicroBenches (std::vector<MicroBench*>& benchmarks) {$/;"	f	class:CMSB
+curr_mem_alloc	MemEstimator.cc	/^static uint64_t curr_mem_alloc = 0;$/;"	v	file:
+entry	epk_hashtab.cc	/^  EpkHashEntry entry;     \/* Table entry (key, value) *\/$/;"	m	struct:ListItem_struct	file:
+epk_hashiter_create	epk_hashtab.cc	/^EpkHashIter* epk_hashiter_create(const EpkHashTab* hashtab)$/;"	f
+epk_hashiter_first	epk_hashtab.cc	/^EpkHashEntry* epk_hashiter_first(EpkHashIter* instance)$/;"	f
+epk_hashiter_free	epk_hashtab.cc	/^void epk_hashiter_free(EpkHashIter* instance)$/;"	f
+epk_hashiter_next	epk_hashtab.cc	/^EpkHashEntry* epk_hashiter_next(EpkHashIter* instance)$/;"	f
+epk_hashtab_create_size	epk_hashtab.cc	/^EpkHashTab* epk_hashtab_create_size(size_t        size,$/;"	f
+epk_hashtab_empty	epk_hashtab.cc	/^int epk_hashtab_empty(const EpkHashTab* instance)$/;"	f
+epk_hashtab_find	epk_hashtab.cc	/^EpkHashEntry* epk_hashtab_find(const EpkHashTab* instance,$/;"	f
+epk_hashtab_foreach	epk_hashtab.cc	/^void epk_hashtab_foreach(const EpkHashTab* instance, epk_ht_proc_f procfunc)$/;"	f
+epk_hashtab_free	epk_hashtab.cc	/^void epk_hashtab_free(EpkHashTab* instance)$/;"	f
+epk_hashtab_insert	epk_hashtab.cc	/^void epk_hashtab_insert(EpkHashTab* instance,$/;"	f
+epk_hashtab_remove	epk_hashtab.cc	/^void epk_hashtab_remove (EpkHashTab* instance, void* key, size_t* index) {$/;"	f
+epk_hashtab_size	epk_hashtab.cc	/^size_t epk_hashtab_size(const EpkHashTab* instance)$/;"	f
+fast_hash	fast_hash.cc	/^uint32_t fast_hash (const char* data, int len) {$/;"	f
+get16bits	fast_hash.cc	13;"	d	file:
+get16bits	fast_hash.cc	6;"	d	file:
+get16bits	fast_hash.cc	9;"	d	file:
+getBenchesMemConsumption	MemEstimator.cc	/^uint64_t CMSB::MemEstimator::getBenchesMemConsumption (const std::vector<CMSB::MicroBench*>& benchmarks) {$/;"	f	class:CMSB::MemEstimator
+getCurrentMemConsumption	MemEstimator.cc	/^uint64_t CMSB::MemEstimator::getCurrentMemConsumption () {$/;"	f	class:CMSB::MemEstimator
+getLocalPeakMemConsumption	MemEstimator.cc	/^uint64_t CMSB::MemEstimator::getLocalPeakMemConsumption () {$/;"	f	class:CMSB::MemEstimator
+getPeakMemConsumption	MemEstimator.cc	/^uint64_t CMSB::MemEstimator::getPeakMemConsumption () {$/;"	f	class:CMSB::MemEstimator
+getProcMemConsumption	MemEstimator.cc	/^uint64_t CMSB::MemEstimator::getProcMemConsumption () {$/;"	f	class:CMSB::MemEstimator
+hash	epk_hashtab.cc	/^  epk_ht_hash_f hash;        \/* Hashing function *\/$/;"	m	struct:EpkHashTab_struct	file:
+hashtab	epk_hashtab.cc	/^  const EpkHashTab* hashtab;     \/* corresponding hash table *\/$/;"	m	struct:EpkHashIter_struct	file:
+index	epk_hashtab.cc	/^        size_t      index;       \/* current field index      *\/$/;"	m	struct:EpkHashIter_struct	file:
+init	OverheadsBench.cc	/^void CMSB::OverheadsBench::init (MPI_Comm worldComm, CMSB::MicroBench::MicroBenchInfo* benchInfo) {$/;"	f	class:CMSB::OverheadsBench
+item	epk_hashtab.cc	/^        ListItem*   item;        \/* current item             *\/$/;"	m	struct:EpkHashIter_struct	file:
+kcmp	epk_hashtab.cc	/^  epk_ht_kcmp_f kcmp;        \/* Comparison function *\/$/;"	m	struct:EpkHashTab_struct	file:
+local_curr_mem_alloc	MemEstimator.cc	/^static uint64_t local_curr_mem_alloc = 0;$/;"	v	file:
+local_peak_mem_alloc	MemEstimator.cc	/^static uint64_t local_peak_mem_alloc = 0;$/;"	v	file:
+main	FutMPIBench.cc	/^int main (int argc, char** argv) {$/;"	f
+my_free_hook	MemEstimator.cc	/^static void my_free_hook (void *ptr, const void *caller) {$/;"	f	file:
+my_init_hook	MemEstimator.cc	/^static void my_init_hook (void) {$/;"	f	file:
+my_malloc_hook	MemEstimator.cc	/^static void * my_malloc_hook (size_t size, const void *caller) {$/;"	f	file:
+next	epk_hashtab.cc	/^  ListItem*    next;      \/* Pointer to next entry *\/$/;"	m	struct:ListItem_struct	file:
+old_free_hook	MemEstimator.cc	/^static void (*old_free_hook)(void*, const void*);$/;"	v	file:
+old_malloc_hook	MemEstimator.cc	/^static void* (*old_malloc_hook)(size_t, const void *);$/;"	v	file:
+peak_mem_alloc	MemEstimator.cc	/^static uint64_t peak_mem_alloc = 0;$/;"	v	file:
+printSmapsFile	MemEstimator.cc	/^void CMSB::MemEstimator::printSmapsFile () {$/;"	f	class:CMSB::MemEstimator
+runMicroBench	OverheadsBench.cc	/^void CMSB::OverheadsBench::runMicroBench () {$/;"	f	class:CMSB::OverheadsBench
+size	epk_hashtab.cc	/^  size_t        size;        \/* Number of items stored *\/$/;"	m	struct:EpkHashTab_struct	file:
+startLocalPeakMemMeasurement	MemEstimator.cc	/^void CMSB::MemEstimator::startLocalPeakMemMeasurement () {$/;"	f	class:CMSB::MemEstimator
+table	epk_hashtab.cc	/^  ListItem**    table;       \/* Field elements *\/$/;"	m	struct:EpkHashTab_struct	file:
+tabsize	epk_hashtab.cc	/^  size_t        tabsize;     \/* Number of field elements *\/$/;"	m	struct:EpkHashTab_struct	file:
+~OverheadsBench	OverheadsBench.cc	/^CMSB::OverheadsBench::~OverheadsBench () {$/;"	f	class:CMSB::OverheadsBench
